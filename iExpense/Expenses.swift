@@ -5,4 +5,9 @@
 //  Created by Dechon Ryan on 5/10/24.
 //
 
-import Foundation
+import SwiftUI
+
+@Observable
+class Expenses {
+    var items = [ExpenseItem]()
+}
