@@ -12,4 +12,14 @@ struct ExpenseItem: Identifiable, Codable {
     let name: String
     let type: String
     let amount: Double
+    
+    var backgroundColor: Color {
+        if amount < 10.01 {
+            .green
+        } else if amount < 100.01 {
+            .blue
+        } else {
+            .purple
+        }
+    }
 }
