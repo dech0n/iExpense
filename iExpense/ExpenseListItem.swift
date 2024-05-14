@@ -25,6 +25,10 @@ struct ExpenseListItem: View {
         }
         .padding(10)
         .background(item.backgroundColor, in: RoundedRectangle(cornerRadius: 8))
+        .font(.none)
     }
 }
 
+#Preview {
+    ExpenseListItem(item: ExpenseItem(name: "Something", type: "Personal", amount: 10.00))
+}

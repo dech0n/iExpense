@@ -15,25 +15,25 @@ struct ContentView: View {
     var body: some View {
         NavigationStack {
             List {
-                Text("Business Expenses")
-                    .font(.title)
-                ForEach(expenses.items) { item in
-                    if item.type == "Business" {
-                        ExpenseListItem(item: item)
+                Section("Business Expenses") {
+                    ForEach(expenses.items) { item in
+                        if item.type == "Business" {
+                            ExpenseListItem(item: item)
+                        }
                     }
+                    .onDelete(perform: removeItems)
                 }
-                .onDelete(perform: removeItems)
+                .font(.title3)
                 
-                Spacer()
-                
-                Text("Personal Expenses")
-                    .font(.title)
-                ForEach(expenses.items) { item in
-                    if item.type == "Personal" {
-                        ExpenseListItem(item: item)
+                Section("Personal Expenses") {
+                    ForEach(expenses.items) { item in
+                        if item.type == "Personal" {
+                            ExpenseListItem(item: item)
+                        }
                     }
+                    .onDelete(perform: removeItems)
                 }
-                .onDelete(perform: removeItems)
+                .font(.title3)
             }
             .navigationTitle("iExpense")
             .toolbar {
