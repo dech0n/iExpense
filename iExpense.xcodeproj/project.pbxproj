@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		B9652FEE2BEF002D00E00915 /* AddView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9652FED2BEF002D00E00915 /* AddView.swift */; };
+		B9652FF62BF2E51300E00915 /* ExpenseListItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9652FF52BF2E51300E00915 /* ExpenseListItem.swift */; };
 		B9D90FB92BEDA61E0063A324 /* iExpenseApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9D90FB82BEDA61E0063A324 /* iExpenseApp.swift */; };
 		B9D90FBB2BEDA61E0063A324 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9D90FBA2BEDA61E0063A324 /* ContentView.swift */; };
 		B9D90FBD2BEDA61F0063A324 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B9D90FBC2BEDA61F0063A324 /* Assets.xcassets */; };
@@ -18,6 +19,7 @@
 
 /* Begin PBXFileReference section */
 		B9652FED2BEF002D00E00915 /* AddView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddView.swift; sourceTree = "<group>"; };
+		B9652FF52BF2E51300E00915 /* ExpenseListItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpenseListItem.swift; sourceTree = "<group>"; };
 		B9D90FB52BEDA61E0063A324 /* iExpense.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iExpense.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B9D90FB82BEDA61E0063A324 /* iExpenseApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iExpenseApp.swift; sourceTree = "<group>"; };
 		B9D90FBA2BEDA61E0063A324 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -62,6 +64,7 @@
 				B9652FED2BEF002D00E00915 /* AddView.swift */,
 				B9D90FC62BEEF4F40063A324 /* ExpenseItem.swift */,
 				B9D90FC82BEEF5B20063A324 /* Expenses.swift */,
+				B9652FF52BF2E51300E00915 /* ExpenseListItem.swift */,
 				B9D90FBC2BEDA61F0063A324 /* Assets.xcassets */,
 				B9D90FBE2BEDA61F0063A324 /* Preview Content */,
 			);
@@ -149,6 +152,7 @@
 				B9D90FBB2BEDA61E0063A324 /* ContentView.swift in Sources */,
 				B9D90FC92BEEF5B20063A324 /* Expenses.swift in Sources */,
 				B9652FEE2BEF002D00E00915 /* AddView.swift in Sources */,
+				B9652FF62BF2E51300E00915 /* ExpenseListItem.swift in Sources */,
 				B9D90FC72BEEF4F40063A324 /* ExpenseItem.swift in Sources */,
 				B9D90FB92BEDA61E0063A324 /* iExpenseApp.swift in Sources */,
 			);

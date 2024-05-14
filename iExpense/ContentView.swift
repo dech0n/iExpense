@@ -15,24 +15,23 @@ struct ContentView: View {
     var body: some View {
         NavigationStack {
             List {
+                Text("Business Expenses")
+                    .font(.title)
                 ForEach(expenses.items) { item in
-                    HStack {
-                        VStack(alignment: .leading) {
-                            Text(item.name)
-                                .font(.headline)
-                            
-                            Text(item.type)
-                        }
-                        
-                        Spacer()
-                        
-                        Text(item.amount, format: .currency(code: Locale.current.currency?.identifier ?? "USD"))
+                    if item.type == "Business" {
+                        ExpenseListItem(item: item)
                     }
-                    .padding(10)
-                    .background(item.backgroundColor, in: RoundedRectangle(cornerRadius: 8))
-                    
-                    
-                    
+                }
+                .onDelete(perform: removeItems)
+                
+                Spacer()
+                
+                Text("Personal Expenses")
+                    .font(.title)
+                ForEach(expenses.items) { item in
+                    if item.type == "Personal" {
+                        ExpenseListItem(item: item)
+                    }
                 }
                 .onDelete(perform: removeItems)
             }
