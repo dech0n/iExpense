@@ -10,6 +10,16 @@ import SwiftUI
 struct ExpenseListItem: View {
     var item: ExpenseItem
     
+    private var backgroundColor: Color {
+        if item.amount < 10.01 {
+            .green
+        } else if item.amount < 100.01 {
+            .blue
+        } else {
+            .purple
+        }
+    }
+    
     var body: some View {
         HStack {
             VStack(alignment: .leading) {
@@ -25,7 +35,7 @@ struct ExpenseListItem: View {
         }
         .padding(10)
         .font(.none)
-        .listRowBackground(item.backgroundColor)
+        .listRowBackground(self.backgroundColor)
     }
 }
 
