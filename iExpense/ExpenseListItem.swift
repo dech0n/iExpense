@@ -11,12 +11,13 @@ struct ExpenseListItem: View {
     var item: ExpenseItem
     
     private var backgroundColor: Color {
-        if item.amount < 10.01 {
-            .green
-        } else if item.amount < 100.01 {
-            .blue
-        } else {
-            .purple
+        switch item.amount {
+        case 0...10:
+                .green
+        case 10.01...100:
+                .blue
+        default:
+                .purple
         }
     }
     
