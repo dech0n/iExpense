@@ -39,6 +39,10 @@ struct AddView: View {
                     expenses.items.append(item)
                     dismiss()
                 }
+                
+                Button("Cancel", role: .cancel) {
+                    dismiss()
+                }
             }
         }
     }
