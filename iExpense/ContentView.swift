@@ -14,6 +14,10 @@ struct ContentView: View {
     
     var body: some View {
         NavigationStack {
+//            NavigationLink("Add expense") {
+//                AddView(expenses: expenses)
+//                    .navigationBarBackButtonHidden()
+//            }
             List {
                 Section("Business Expenses") {
                     ForEach(expenses.items) { item in
@@ -37,12 +41,12 @@ struct ContentView: View {
             }
             .navigationTitle("iExpense")
             .toolbar {
-                Button("Add Expense", systemImage: "plus") {
-                    showingAddExpense = true
+                NavigationLink {
+                    AddView(expenses: expenses)
+                        .navigationBarBackButtonHidden()
+                } label: {
+                    Label("Add expense", systemImage: "plus")
                 }
-            }
-            .sheet(isPresented: $showingAddExpense) {
-                AddView(expenses: expenses)
             }
         }
     }
