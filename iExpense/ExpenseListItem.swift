@@ -24,8 +24,8 @@ struct ExpenseListItem: View {
             Text(item.amount, format: .currency(code: Locale.current.currency?.identifier ?? "USD"))
         }
         .padding(10)
-        .background(item.backgroundColor, in: RoundedRectangle(cornerRadius: 8))
         .font(.none)
+        .listRowBackground(item.backgroundColor)
     }
 }
 
