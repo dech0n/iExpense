@@ -37,9 +37,11 @@ struct ExpenseListItem: View {
         .padding(10)
         .font(.none)
         .listRowBackground(self.backgroundColor)
+        .foregroundStyle(.white.opacity(0.8))
     }
 }
 
 #Preview {
     ExpenseListItem(item: ExpenseItem(name: "Something", type: "Personal", amount: 10.00))
+        .preferredColorScheme(.dark)
 }
